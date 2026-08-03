@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>LightAI Prototype Review</title>
+  <style>
+    :root { color: #172033; background: #f4f6f8; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; }
+    header { background: #101827; color: #fff; border-bottom: 4px solid #a6ff00; }
+    .header-inner, main { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .header-inner { padding: 30px 0 26px; }
+    .eyebrow { margin: 0 0 8px; color: #a6ff00; font-size: 13px; font-weight: 700; text-transform: uppercase; }
+    h1 { margin: 0; font-size: 30px; line-height: 1.2; letter-spacing: 0; }
+    .subtitle { margin: 9px 0 0; color: #cbd5e1; line-height: 1.6; }
+    main { padding: 28px 0 48px; }
+    .review-note { padding: 14px 16px; background: #fff; border: 1px solid #d9dee7; border-left: 4px solid #1677ff; border-radius: 6px; line-height: 1.6; }
+    section { margin-top: 28px; }
+    .section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+    h2 { margin: 0; font-size: 19px; letter-spacing: 0; }
+    .count { color: #687386; font-size: 13px; }
+    .entries { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .entry { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; min-height: 82px; padding: 16px 48px 16px 16px; color: inherit; text-decoration: none; background: #fff; border: 1px solid #d9dee7; border-radius: 6px; transition: border-color .15s, box-shadow .15s; }
+    .entry:hover, .entry:focus-visible { border-color: #1677ff; box-shadow: 0 4px 14px rgba(23, 32, 51, .09); outline: none; }
+    .entry__name { font-weight: 700; }
+    .entry__description { grid-column: 1; color: #687386; font-size: 13px; line-height: 1.45; }
+    .entry__arrow { position: absolute; right: 17px; top: 50%; color: #1677ff; font-size: 20px; transform: translateY(-50%); }
+    footer { margin-top: 30px; color: #687386; font-size: 12px; line-height: 1.7; }
+    @media (max-width: 720px) {
+      .header-inner, main { width: min(100% - 28px, 1120px); }
+      .header-inner { padding: 24px 0 20px; }
+      h1 { font-size: 25px; }
+      .entries { grid-template-columns: 1fr; }
+      .entry { min-height: 76px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <p class="eyebrow">Prototype Review Workspace</p>
+      <h1>LightAI</h1>
+      <p class="subtitle">交易员智能辅助与 Rule 生命周期平台 · 研发测试预览入口</p>
+    </div>
+  </header>
+  <main>
+    <div class="review-note">此环境用于原型评审和业务验收。页面数据为演示数据，不连接真实交易账户，也不执行真实下单。</div>
+    <section>
+      <div class="section-heading"><h2>客户端</h2><span class="count">6 个入口</span></div>
+      <div class="entries">
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/ref-app-home-copy/">
+      <span class="entry__name">Client Home</span>
+      <span class="entry__description">交易员工作台与项目级 PRD入口</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/analysis/">
+      <span class="entry__name">Technical Analysis</span>
+      <span class="entry__description">AI 辅助技术分析</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/ref-trader-training/">
+      <span class="entry__name">Trader Training</span>
+      <span class="entry__description">交易员训练与考核</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/rules/">
+      <span class="entry__name">Rules</span>
+      <span class="entry__description">个人 Rule 创建与管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/backtest/">
+      <span class="entry__name">Backtest</span>
+      <span class="entry__description">历史回测与结果复盘</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/signals/">
+      <span class="entry__name">Signals</span>
+      <span class="entry__description">信号流与 My Watches</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a></div>
+    </section>
+    <section>
+      <div class="section-heading"><h2>管理端</h2><span class="count">9 个入口</span></div>
+      <div class="entries">
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-dashboard/">
+      <span class="entry__name">Admin Dashboard</span>
+      <span class="entry__description">管理端工作台</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-trader-list/">
+      <span class="entry__name">Trader Management</span>
+      <span class="entry__description">交易员与权限查看</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-trader-groups/">
+      <span class="entry__name">Trader Groups</span>
+      <span class="entry__description">交易员组别管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-rules/">
+      <span class="entry__name">Rule Library</span>
+      <span class="entry__description">平台与交易员 Rule 管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-rule-groups/">
+      <span class="entry__name">Rule Groups</span>
+      <span class="entry__description">平台 Rule 组管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-backtests/">
+      <span class="entry__name">Backtest Center</span>
+      <span class="entry__description">全量回测管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/ref-signals/">
+      <span class="entry__name">Signal Tasks</span>
+      <span class="entry__description">信号任务管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/ref-signal-push-details/">
+      <span class="entry__name">Push Details</span>
+      <span class="entry__description">信号推送明细</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a>
+    <a class="entry" href="/LightAI-Pro-Preview/prototypes/admin-push-channels/">
+      <span class="entry__name">Push Channels</span>
+      <span class="entry__description">推送渠道管理</span>
+      <span class="entry__arrow" aria-hidden="true">&#8594;</span>
+    </a></div>
+    </section>
+    <footer>Build local · 2026-08-03 09:33:26 UTC<br>每次 main 分支部署成功后，本页面自动更新。</footer>
+  </main>
+</body>
+</html>
