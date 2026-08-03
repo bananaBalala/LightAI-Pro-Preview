@@ -115,7 +115,7 @@
         window.ReactDOM = ReactDOM;
 
         // 加载组件 JS（IIFE 格式，会挂载 UserComponent 到 window）
-        await loadEntryScript('./ref-trader-training-copy-2.js');
+        await loadEntryScript('../ref-trader-training-copy-2.js');
 
         const Component = window.UserComponent?.Component || window.UserComponent?.default || window.UserComponent;
         if (!Component) {
